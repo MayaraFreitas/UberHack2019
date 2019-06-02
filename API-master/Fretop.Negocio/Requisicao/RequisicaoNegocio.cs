@@ -1,5 +1,6 @@
 ﻿using Fretop.Dados.Requisicao;
 using Fretop.Infraestrutura.Classes;
+using System.Collections.Generic;
 
 namespace Fretop.Negocio.Requisicao
 {
@@ -12,7 +13,7 @@ namespace Fretop.Negocio.Requisicao
             _requisicaoDados = requisicaoDados;
         }
 
-        public ViewRotaOnibus ObterRotaApartirDaLocalização(LocalizacaoFiltro localizacaoFiltro)
+        public List<Localizacao> ObterRotaApartirDaLocalização(Localizacao localizacaoFiltro)
         {
             return _requisicaoDados.ObterRotaApartirDaLocalização(localizacaoFiltro);
         }

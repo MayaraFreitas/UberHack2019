@@ -18,19 +18,5 @@ namespace Fretop.Infraestrutura.Classes
         public string LngInicio { get; set; }
         public string LatFim { get; set; }
         public string LngFim { get; set; }
-
-        public void SimulandoBusca(LocalizacaoFiltro localizacaoFiltro)
-        {
-            IdOnubus = 1;
-            PlacaOnibus = "NEE-3496";
-            IdMotorista = 1;
-            NomeMotorista = "Amanda Borges";
-            HoraInicio = "05:35";
-            HoraFIm = "06:55";
-            LatInicio = "52.05429";
-            LngInicio = "52.076892";
-            LatFim = "4.26975";
-            LngFim = "5.61852";
-        }
     }
 }

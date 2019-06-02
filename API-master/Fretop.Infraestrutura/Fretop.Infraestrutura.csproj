@@ -73,7 +73,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\LocalizacaoFiltro.cs" />
+    <Compile Include="Classes\Localizacao.cs" />
     <Compile Include="Classes\ViewRotaOnibus.cs" />
     <Compile Include="Classes\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
