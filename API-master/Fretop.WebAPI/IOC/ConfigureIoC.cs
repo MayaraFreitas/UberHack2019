@@ -1,10 +1,9 @@
-﻿using Fretop.Infraestrutura.Classes;
-using Microsoft.Practices.Unity;
-using Fretop.Negocio.Usuarios;
+﻿using Fretop.Dados.Requisicao;
 using Fretop.Dados.Usuarios;
+using Fretop.Negocio.Requisicao;
+using Fretop.Negocio.Usuarios;
 using Unity;
 using Unity.Lifetime;
-using Unity.Injection;
 
 namespace Fretop.WebAPI.DTO
 {
@@ -49,6 +48,10 @@ namespace Fretop.WebAPI.DTO
         {
             container.RegisterType<IUsuarioNegocio, UsuarioNegocio>(new HierarchicalLifetimeManager());
             container.RegisterType<IUsuarioDados, UsuarioDados>(new HierarchicalLifetimeManager());
+
+            container.RegisterType<IRequisicaoDados, RequisicaoDados>(new HierarchicalLifetimeManager());
+            container.RegisterType<IRequisicaoNegocio, RequisicaoNegocio>(new HierarchicalLifetimeManager());
+
         }
     }
 }

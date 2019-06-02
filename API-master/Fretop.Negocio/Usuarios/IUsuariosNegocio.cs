@@ -29,6 +29,5 @@ namespace Fretop.Negocio.Usuarios
         Usuario SelecionaUsuarioPorLogin(String Login);
 
         bool SelecionaUsuarioLoginSenha(string login, string senha);
-
     }
 }
