@@ -86,7 +86,7 @@ namespace Fretop.WebAPI.Controllers
                     localizacao = await response.Content.ReadAsAsync<Localizacao>();
                 }
 
-                // Atravez da matriz formada identificar grupo e traçar rota....
+                // A partir da matriz formada identificar grupo e traçar rota....
                 //return localizacao;
             }
         }
