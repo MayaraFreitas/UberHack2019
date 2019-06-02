@@ -76,6 +76,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requisicao\IRequisicaoNegocio.cs" />
+    <Compile Include="Requisicao\RequisicaoNegocio.cs" />
     <Compile Include="Usuarios\IUsuariosNegocio.cs" />
     <Compile Include="Usuarios\UsuariosNegocio.cs" />
   </ItemGroup>
