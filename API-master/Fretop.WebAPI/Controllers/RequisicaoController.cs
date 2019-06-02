@@ -1,4 +1,5 @@
-﻿using Fretop.Negocio.Requisicao;
+﻿using Fretop.Infraestrutura.Classes;
+using Fretop.Negocio.Requisicao;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -20,11 +21,12 @@ namespace Fretop.WebAPI.Controllers
 
         [HttpGet]
         [ActionName("requisicaoOnibus")]
-        public HttpResponseMessage Index()
+        public HttpResponseMessage Index(string address, string lat, string lng)
         {
             try
             {
-                var rota = _requisicaoNegocio.ObterRotaApartirDaLocalização(null);
+                LocalizacaoFiltro localizacao = new LocalizacaoFiltro(address, lat, lng);
+                var rota = _requisicaoNegocio.ObterRotaApartirDaLocalização(localizacao);
 
                 return Request.CreateResponse(HttpStatusCode.OK, rota);
             }

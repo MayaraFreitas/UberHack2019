@@ -19,7 +19,7 @@ namespace Fretop.Infraestrutura.Classes
         public string LatFim { get; set; }
         public string LngFim { get; set; }
 
-        public void MockandoDado()
+        public void SimulandoBusca(LocalizacaoFiltro localizacaoFiltro)
         {
             IdOnubus = 1;
             PlacaOnibus = "NEE-3496";

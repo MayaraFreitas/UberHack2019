@@ -7,7 +7,7 @@ namespace Fretop.Dados.Requisicao
         public ViewRotaOnibus ObterRotaApartirDaLocalização(LocalizacaoFiltro localizacaoFiltro)
         {
             ViewRotaOnibus rota = new ViewRotaOnibus();
-            rota.MockandoDado(); // Mockando dado de uma rota para o usuario
+            rota.SimulandoBusca(localizacaoFiltro); // Mockando dado de uma rota para o usuario
             return rota;
         }
     }
