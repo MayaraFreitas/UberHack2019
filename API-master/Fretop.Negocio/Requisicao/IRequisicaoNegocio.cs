@@ -1,9 +1,10 @@
 ﻿using Fretop.Infraestrutura.Classes;
+using System.Collections.Generic;
 
 namespace Fretop.Negocio.Requisicao
 {
     public interface IRequisicaoNegocio
     {
-        ViewRotaOnibus ObterRotaApartirDaLocalização(LocalizacaoFiltro localizacaoFiltro);
+        List<Localizacao> ObterRotaApartirDaLocalização(Localizacao localizacaoFiltro);
     }
 }
