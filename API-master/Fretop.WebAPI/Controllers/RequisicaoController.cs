@@ -29,8 +29,6 @@ namespace Fretop.WebAPI.Controllers
         [ActionName("requisicaoOnibus")]
         public HttpResponseMessage Index(string address, string lat, string lng)
         {
-            
-
             try
             {
                 Localizacao localizacao = new Localizacao(address, lat, lng);
@@ -45,8 +43,6 @@ namespace Fretop.WebAPI.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError, new { erro = "Houve um erro ao localizar um ônibus disponível. Erro: " + e.ToString() });
             }
-
-            return Request.CreateResponse(HttpStatusCode.OK);
         }
 
         public static async Task RunAsync2(Localizacao localizacao, List<Localizacao> lstLocalizacaoDB)
@@ -89,6 +85,9 @@ namespace Fretop.WebAPI.Controllers
                 {  //GET
                     localizacao = await response.Content.ReadAsAsync<Localizacao>();
                 }
+
+                // Atravez da matriz formada identificar grupo e traçar rota....
+                //return localizacao;
             }
         }
 
